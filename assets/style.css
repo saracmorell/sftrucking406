@@ -416,3 +416,13 @@ a:hover {
     height: 200px;
   }
 }
+/* === Bring back the green background Sara loved === */
+body {
+  background-color: #dfead6; /* soft sage green */
+}
+
+/* Make the sticky header match the green background */
+.site-header {
+  background: rgba(223, 234, 214, 0.92);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
