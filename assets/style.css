@@ -336,6 +336,34 @@ img, svg {
     justify-content: flex-start;
     gap: 12px;
   }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-icon {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.brand-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Mobile polish */
+@media (max-width: 600px) {
+  .brand-icon {
+    height: 28px;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+  }
+}
 
   .nav a {
     font-size: 1rem;
