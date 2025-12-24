@@ -292,3 +292,36 @@ h3{margin:0 0 10px}
   .grid-3,.grid-2,.gallery{grid-template-columns:1fr}
   .nav{gap:14px}
 }
+/* Mobile horizontal scroll fix */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make header wrap on small screens */
+.header-inner {
+  flex-wrap: wrap;
+}
+
+.nav {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Prevent “brand” from forcing width */
+.brand {
+  min-width: 0;
+}
+.brand-name {
+  word-break: break-word;
+}
+
+/* Prevent any single element from forcing overflow */
+* {
+  max-width: 100%;
+}
