@@ -450,3 +450,48 @@ h3{
     font-size: 0.98rem;
   }
 }
+/* =========================
+   HEADER SCALE FIX
+   ========================= */
+
+.site-header {
+  padding: 18px 0;
+}
+
+.header-inner {
+  align-items: center;
+}
+
+/* Business name = dominant */
+.brand-name {
+  font-size: 1.6rem;     /* was too small */
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+/* Badge slightly larger but quieter */
+.brand-mark {
+  width: 58px;
+  height: 58px;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+}
+
+/* Nav should support, not compete */
+.nav a {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* CTA stays strong */
+.nav .btn {
+  font-size: 1.05rem;
+  padding: 12px 18px;
+}
+
+/* Mobile sanity check */
+@media (max-width: 900px) {
+  .brand-name {
+    font-size: 1.25rem;
+  }
+}
