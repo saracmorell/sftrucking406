@@ -325,3 +325,23 @@ img, svg {
 * {
   max-width: 100%;
 }
+@media (max-width: 520px) {
+  .header-inner {
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 1rem;
+  }
+
+  .btn-small {
+    margin-left: auto;
+  }
+}
