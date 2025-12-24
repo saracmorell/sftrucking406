@@ -332,3 +332,23 @@ h3{margin:0 0 10px}
     font-size:clamp(1.65rem, 7vw, 2.15rem); /* smaller on phones */
   }
 }
+/* FINAL BALANCE: Make the hero headline match the header scale better */
+h1{
+  font-size: clamp(1.65rem, 2.6vw, 2.25rem) !important;
+  letter-spacing: -0.25px;
+}
+
+/* Tighten hero spacing so it feels less “billboard” */
+.hero{
+  padding: 44px 0 26px !important;
+}
+
+/* Optional: make the logo slightly more present in the header */
+.brand-icon{
+  height: 40px !important;
+}
+
+/* Optional: give the header a little more “authority” without getting tall */
+.header-inner{
+  padding: 14px 0 !important;
+}
