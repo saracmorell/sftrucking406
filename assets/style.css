@@ -416,13 +416,57 @@ a:hover {
     height: 200px;
   }
 }
-/* === Bring back the green background Sara loved === */
+/* ============================
+   RESTORE ORIGINAL GREEN LOOK
+   ============================ */
+
+/* Site background – soft farm green */
 body {
-  background-color: #dfead6; /* soft sage green */
+  background-color: #dfead6; /* original soft green */
 }
 
-/* Make the sticky header match the green background */
+/* Header stays clean and readable */
 .site-header {
-  background: rgba(223, 234, 214, 0.92);
+  background: rgba(223, 234, 214, 0.95);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* HERO section keeps contrast and warmth */
+.hero {
+  background: #dfead6;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Make hero text pop again */
+.hero h1 {
+  font-size: 3.25rem;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.hero .lead {
+  font-size: 1.15rem;
+  color: #333;
+}
+
+/* White content sections float nicely on green */
+.section,
+.section-alt {
+  background: #ffffff;
+  border-radius: 18px;
+  margin: 40px auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+/* Footer stays grounded and rich */
+.site-footer {
+  background: #2f4f2f; /* deep farm green */
+  color: #f5f5f5;
+}
+
+.site-footer a {
+  color: #f5f5f5;
+  text-decoration: underline;
 }
