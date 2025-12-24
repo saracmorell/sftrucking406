@@ -2,373 +2,316 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
   <title>Salomon Farms &amp; Trucking, LLC</title>
-  <meta name="description" content="Salomon Farms & Trucking, LLC provides reliable hauling, farm support, and freight solutions. Request a quote by email today." />
-  <meta name="keywords" content="trucking, hauling, farm hauling, freight, Montana trucking, Salomon Farms and Trucking" />
+  <meta name="description" content="Reliable hauling, farm support, and freight solutions. Request a quote or email today." />
+  <meta name="keywords" content="trucking, hauling, farm hauling, freight, Montana, Salomon Farms and Trucking" />
 
-  <!-- Favicon (optional, only if you actually have these files) -->
-  <!-- <link rel="icon" href="assets/img/favicon.png" /> -->
+  <!-- Favicons (optional) -->
+  <link href="assets/img/favicon.png" rel="icon" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Open+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Bootstrap (CDN so you don't need vendor folders) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- Bootstrap Icons (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-
-  <!-- Your CSS (THIS is the important fix) -->
-  <link rel="stylesheet" href="assets/style.css" />
-
-  <style>
-    /* Minimal safety styling in case CSS changes later */
-    body { font-family: "Open Sans", Arial, sans-serif; }
-    .hero-simple {
-      min-height: 72vh;
-      display: flex;
-      align-items: center;
-      background: #0b1a2b;
-      color: #fff;
-      position: relative;
-    }
-    .hero-simple::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background: rgba(0,0,0,0.55);
-    }
-    .hero-inner{
-      position: relative;
-      z-index: 1;
-    }
-    .brandmark {
-      font-family: "Playfair Display", serif;
-      letter-spacing: 0.02em;
-    }
-    .btn-cta {
-      border-radius: 999px;
-      padding: 0.8rem 1.25rem;
-      font-weight: 700;
-    }
-    .section-pad { padding: 64px 0; }
-    .card-soft {
-      border: 0;
-      border-radius: 18px;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
-    }
-    .sticky-top-nav { background: rgba(0,0,0,0.88); }
-    .nav-link { font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-    .nav-link:hover { opacity: 0.9; }
-    footer { background: #0b1a2b; color: #fff; }
-    .small-muted { opacity: 0.85; }
-  </style>
+  <!-- Main CSS File (YOUR DevFolio CSS) -->
+  <link href="assets/style.css" rel="stylesheet" />
 </head>
 
 <body>
 
-  <!-- Top Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top sticky-top-nav">
-    <div class="container">
-      <a class="navbar-brand brandmark" href="#home">
-        SF&amp;T
-      </a>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="#hero">SF&amp;T</a></h1>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#coverage">Coverage</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="#quote">Request a Quote</a></li>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#coverage">Coverage</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#quote">Request a Quote</a></li>
         </ul>
-      </div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
     </div>
-  </nav>
+  </header>
+  <!-- End Header -->
 
-  <!-- Hero -->
-  <header id="home" class="hero-simple">
-    <div class="container hero-inner">
-      <div class="row">
-        <div class="col-lg-9 col-xl-8">
-          <h1 class="brandmark display-5 mb-3">Salomon Farms &amp; Trucking, LLC</h1>
-          <p class="lead mb-4">
-            Reliable hauling, farm support, and freight solutions.
-          </p>
+  <!-- ======= Hero Section ======= -->
+  <!-- IMPORTANT: This matches the DevFolio CSS. -->
+  <div
+    id="hero"
+    class="hero route bg-image"
+    style="background-image: url(assets/img/hero-bg.jpg);"
+  >
+    <div class="overlay-itro"></div>
 
-          <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-primary btn-cta" href="#quote">
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="hero-title mb-3">Salomon Farms &amp; Trucking, LLC</h1>
+          <p class="hero-subtitle">Reliable hauling, farm support, and freight solutions.</p>
+
+          <div class="mt-4 d-flex gap-3 flex-wrap justify-content-center">
+            <a class="btn btn-primary btn-lg" href="#quote">
               <i class="bi bi-clipboard-check me-2"></i>Request a Quote
             </a>
-            <a class="btn btn-outline-light btn-cta" href="mailto:sftrucking406@gmail.com?subject=Request%20a%20Quote%20-%20Salomon%20Farms%20%26%20Trucking">
+            <a class="btn btn-outline-light btn-lg" href="mailto:sftrucking406@gmail.com">
               <i class="bi bi-envelope me-2"></i>Email Us
             </a>
           </div>
 
-          <div class="mt-4 small-muted">
-            <div><i class="bi bi-envelope me-2"></i><strong>Email:</strong> <a class="text-white text-decoration-underline" href="mailto:sftrucking406@gmail.com">sftrucking406@gmail.com</a></div>
-            <div class="mt-1"><i class="bi bi-geo-alt me-2"></i><strong>Serving:</strong> Local and regional routes.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section id="about" class="section-pad">
-    <div class="container">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-5">
-          <div class="card card-soft p-4">
-            <h2 class="brandmark h3 mb-3">About Salomon Farms &amp; Trucking</h2>
+          <div class="mt-4 text-start mx-auto" style="max-width: 520px;">
+            <p class="mb-1">
+              <i class="bi bi-envelope me-2"></i>
+              <strong>Email:</strong>
+              <a class="text-white" href="mailto:sftrucking406@gmail.com">sftrucking406@gmail.com</a>
+            </p>
             <p class="mb-0">
-              Salomon Farms &amp; Trucking, LLC provides dependable hauling and transport support with a no-nonsense approach, clear communication, and work done the right way.
+              <i class="bi bi-geo-alt me-2"></i>
+              <strong>Serving:</strong> Local and regional routes.
             </p>
           </div>
-        </div>
 
-        <div class="col-lg-7">
-          <div class="card card-soft p-4">
-            <h3 class="h5 mb-3">What you can expect</h3>
-            <ul class="mb-0">
-              <li>Dependable scheduling and communication.</li>
-              <li>Safety-focused, detail-oriented operations.</li>
-              <li>Farm-friendly, practical hauling solutions.</li>
-              <li>Honest updates and careful handling of cargo.</li>
-            </ul>
-
-            <div class="mt-3">
-              <a class="btn btn-primary btn-cta" href="#services">View Services</a>
-              <a class="btn btn-outline-primary btn-cta ms-2" href="#contact">Ask a Question</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- End Hero Section -->
 
-  <!-- Services -->
-  <section id="services" class="section-pad bg-light">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="brandmark">Services</h2>
-        <p class="mb-0">Practical hauling support for farms and freight needs.</p>
-      </div>
+  <main id="main">
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card card-soft p-4 h-100">
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-truck fs-3 me-2"></i>
-              <h3 class="h5 mb-0">Trucking &amp; Hauling</h3>
-            </div>
-            <p>Local and regional hauling support with dependable pickup and delivery coordination.</p>
-            <a href="#quote" class="btn btn-primary btn-cta mt-auto">Request a Quote</a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card card-soft p-4 h-100">
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-box-seam fs-3 me-2"></i>
-              <h3 class="h5 mb-0">Freight Transport</h3>
-            </div>
-            <p>Straightforward freight solutions with clear updates and careful handling.</p>
-            <a href="mailto:sftrucking406@gmail.com?subject=Freight%20Transport%20Quote%20Request" class="btn btn-outline-primary btn-cta mt-auto">Email for Pricing</a>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card card-soft p-4 h-100">
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-tree fs-3 me-2"></i>
-              <h3 class="h5 mb-0">Farm Support Hauling</h3>
-            </div>
-            <p>Hauling support built around farm needs, timing, and practical coordination.</p>
-            <a href="#contact" class="btn btn-outline-primary btn-cta mt-auto">Ask a Question</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Coverage -->
-  <section id="coverage" class="section-pad">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="card card-soft p-4 h-100">
-            <h2 class="brandmark h3 mb-2">Coverage</h2>
-            <p>Serving local and regional routes. If you are unsure whether your job location is covered, send the pickup and drop-off details and we will confirm quickly.</p>
-            <ul class="mb-0">
-              <li>Local routes.</li>
-              <li>Regional routes.</li>
-              <li>Farm-related hauling support.</li>
-              <li>Freight support as needed.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="card card-soft p-4 h-100">
-            <h3 class="h5 mb-2">Fastest way to confirm availability</h3>
-            <p class="mb-3">Email the details below and we will respond with next steps.</p>
-            <ul class="mb-0">
-              <li><strong>Pickup city and state.</strong></li>
-              <li><strong>Drop-off city and state.</strong></li>
-              <li><strong>Load type and approximate weight.</strong></li>
-              <li><strong>Preferred pickup date.</strong></li>
-            </ul>
-            <div class="mt-3">
-              <a class="btn btn-primary btn-cta" href="mailto:sftrucking406@gmail.com?subject=Availability%20Check%20-%20Salomon%20Farms%20%26%20Trucking">Email Availability Check</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section-pad bg-light">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="brandmark">Contact</h2>
-        <p class="mb-0">Questions, scheduling, or general info.</p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="card card-soft p-4">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="p-3 border rounded-4 bg-white h-100">
-                  <div class="fw-bold mb-1"><i class="bi bi-envelope me-2"></i>Email</div>
-                  <a href="mailto:sftrucking406@gmail.com" class="text-decoration-underline">sftrucking406@gmail.com</a>
-                </div>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="box-shadow-full">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="title-box-2">
+                <h5 class="title-left">About Salomon Farms &amp; Trucking</h5>
               </div>
-              <div class="col-md-6">
-                <div class="p-3 border rounded-4 bg-white h-100">
-                  <div class="fw-bold mb-1"><i class="bi bi-clipboard-check me-2"></i>Request a Quote</div>
-                  <a href="#quote" class="text-decoration-underline">Use the form below</a>
-                </div>
+              <p>
+                Salomon Farms &amp; Trucking, LLC provides dependable hauling and transport support with a
+                no-nonsense approach, clear communication, and work done the right way.
+              </p>
+              <p class="mb-0">
+                Whether you need scheduled loads, one-off hauling, or farm-related transport support,
+                you can expect reliable coordination, honest updates, and a safety-first focus that protects your cargo.
+              </p>
+            </div>
+
+            <div class="col-md-6">
+              <div class="title-box-2">
+                <h5 class="title-left">What you can expect</h5>
+              </div>
+              <ul class="list-ico">
+                <li><span class="bi bi-check-circle"></span> Dependable scheduling and communication.</li>
+                <li><span class="bi bi-check-circle"></span> Safety-focused, detail-oriented operations.</li>
+                <li><span class="bi bi-check-circle"></span> Farm-friendly, practical hauling solutions.</li>
+                <li><span class="bi bi-check-circle"></span> Honest updates and careful handling.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services-mf pt-5 route">
+      <div class="container">
+        <div class="title-box text-center">
+          <h3 class="title-a">Services</h3>
+          <p class="subtitle-a">Practical hauling support for farms and freight needs.</p>
+          <div class="line-mf"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-truck"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Trucking &amp; Hauling</h2>
+                <p class="s-description">
+                  Local and regional hauling support with dependable pickup and delivery coordination.
+                </p>
+                <a class="button button-a button-rouded" href="#quote">Request a Quote</a>
               </div>
             </div>
+          </div>
 
-            <div class="mt-3">
-              <a class="btn btn-primary btn-cta" href="#quote">Request a Quote</a>
-              <a class="btn btn-outline-primary btn-cta ms-2" href="mailto:sftrucking406@gmail.com?subject=Question%20-%20Salomon%20Farms%20%26%20Trucking">Email a Question</a>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-box-seam"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Freight Transport</h2>
+                <p class="s-description">
+                  Straightforward freight solutions with clear updates and careful handling.
+                </p>
+                <a class="button button-a button-rouded" href="mailto:sftrucking406@gmail.com">Email Us</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-tree"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Farm Support</h2>
+                <p class="s-description">
+                  Farm-friendly transport support, timed around real work schedules and seasonal needs.
+                </p>
+                <a class="button button-a button-rouded" href="#contact">Ask a Question</a>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- End Services Section -->
 
-  <!-- Quote -->
-  <section id="quote" class="section-pad">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="brandmark">Request a Quote</h2>
-        <p class="mb-0">This form sends an email request (works on static GitHub Pages).</p>
+    <!-- ======= Coverage Section ======= -->
+    <section id="coverage" class="sect-pt4 route">
+      <div class="container">
+        <div class="box-shadow-full">
+          <div class="title-box-2">
+            <h5 class="title-left">Coverage</h5>
+          </div>
+          <p class="mb-2">
+            Serving local and regional routes. If you’re unsure whether your load fits, send details and we’ll confirm quickly.
+          </p>
+          <a class="button button-a button-rouded" href="#quote">Request a Quote</a>
+        </div>
       </div>
+    </section>
+    <!-- End Coverage Section -->
 
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="card card-soft p-4">
-            <!-- Static-site email form -->
-            <form action="mailto:sftrucking406@gmail.com" method="post" enctype="text/plain">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label">Your Name</label>
-                  <input class="form-control" type="text" name="Name" required />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Your Email</label>
-                  <input class="form-control" type="email" name="Email" required />
-                </div>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="paralax-mf footer-paralax bg-image route" style="background-image: url(assets/img/overlay-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
 
-                <div class="col-md-6">
-                  <label class="form-label">Pickup Location</label>
-                  <input class="form-control" type="text" name="Pickup Location" placeholder="City, State" required />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Drop-off Location</label>
-                  <input class="form-control" type="text" name="Drop-off Location" placeholder="City, State" required />
-                </div>
+            <div class="contact-mf">
+              <div id="contact" class="box-shadow-full">
+                <div class="row g-4">
 
-                <div class="col-md-6">
-                  <label class="form-label">Load Type</label>
-                  <input class="form-control" type="text" name="Load Type" placeholder="Freight, farm load, etc." />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Preferred Date</label>
-                  <input class="form-control" type="text" name="Preferred Date" placeholder="MM/DD or flexible" />
-                </div>
+                  <div class="col-md-6">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">Contact</h5>
+                    </div>
+                    <p class="lead">
+                      Email is the fastest way to reach us. Include pickup location, drop location, load details, and your timeline.
+                    </p>
+                    <ul class="list-ico">
+                      <li><span class="bi bi-envelope"></span> <a href="mailto:sftrucking406@gmail.com">sftrucking406@gmail.com</a></li>
+                      <li><span class="bi bi-geo-alt"></span> Local and regional routes</li>
+                    </ul>
+                  </div>
 
-                <div class="col-12">
-                  <label class="form-label">Details</label>
-                  <textarea class="form-control" name="Details" rows="5" placeholder="Weight estimate, timing, special notes, best contact method."></textarea>
-                </div>
+                  <div class="col-md-6" id="quote">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">Request a Quote</h5>
+                    </div>
 
-                <div class="col-12 d-flex flex-wrap gap-2">
-                  <button class="btn btn-primary btn-cta" type="submit">
-                    <i class="bi bi-send me-2"></i>Send Quote Request
-                  </button>
-                  <a class="btn btn-outline-primary btn-cta" href="mailto:sftrucking406@gmail.com?subject=Request%20a%20Quote%20-%20Salomon%20Farms%20%26%20Trucking">
-                    Prefer Email
-                  </a>
-                </div>
+                    <!-- Simple mailto “form” (no server needed) -->
+                    <form onsubmit="return sendQuoteEmail(event)">
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <input type="text" id="q_name" class="form-control" placeholder="Your name" required />
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <input type="email" id="q_email" class="form-control" placeholder="Your email" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="text" id="q_pickup" class="form-control" placeholder="Pickup city/state" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="text" id="q_drop" class="form-control" placeholder="Drop city/state" required />
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <textarea id="q_details" class="form-control" rows="5" placeholder="Load details, weight, dates, special notes" required></textarea>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" class="button button-a button-big button-rouded">
+                            Send Quote Request
+                          </button>
+                        </div>
+                      </div>
+                    </form>
 
-                <div class="col-12 small-muted">
-                  Note: This opens your email app to send the request. For a true embedded form (no email app), you would need a form service (Formspree, Netlify Forms, etc.).
+                  </div>
+
                 </div>
               </div>
-            </form>
+            </div>
+
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- End Contact Section -->
 
-  <!-- Footer -->
-  <footer class="py-4">
-    <div class="container text-center">
-      <div class="brandmark fw-semibold mb-1">Salomon Farms &amp; Trucking, LLC</div>
-      <div class="small-muted">Reliable hauling, farm support, and freight solutions.</div>
-      <div class="small-muted mt-2">
-        <a class="text-white text-decoration-underline" href="mailto:sftrucking406@gmail.com">sftrucking406@gmail.com</a>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        &copy; <span id="year"></span> <strong>Salomon Farms &amp; Trucking, LLC</strong>. All Rights Reserved.
       </div>
-      <div class="small-muted mt-2">&copy; <span id="year"></span> Salomon Farms &amp; Trucking, LLC. All rights reserved.</div>
     </div>
   </footer>
+  <!-- End Footer -->
 
-  <!-- Bootstrap JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script>
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Smooth scroll for on-page nav (safe + simple)
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", (e) => {
-        const id = a.getAttribute("href");
-        if (!id || id === "#") return;
-        const el = document.querySelector(id);
-        if (!el) return;
-        e.preventDefault();
-        el.scrollIntoView({ behavior: "smooth" });
-      });
-    });
+    // Mailto quote helper (no backend needed)
+    function sendQuoteEmail(e) {
+      e.preventDefault();
+      const name = document.getElementById("q_name").value.trim();
+      const email = document.getElementById("q_email").value.trim();
+      const pickup = document.getElementById("q_pickup").value.trim();
+      const drop = document.getElementById("q_drop").value.trim();
+      const details = document.getElementById("q_details").value.trim();
+
+      const subject = encodeURIComponent("Quote Request, Salomon Farms & Trucking");
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Pickup: ${pickup}\n` +
+        `Drop: ${drop}\n\n` +
+        `Details:\n${details}\n`
+      );
+
+      window.location.href = `mailto:sftrucking406@gmail.com?subject=${subject}&body=${body}`;
+      return false;
+    }
   </script>
 </body>
 </html>
