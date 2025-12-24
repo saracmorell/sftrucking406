@@ -18,6 +18,10 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 
+/* Prevent horizontal scroll */
+html, body { width:100%; overflow-x:hidden; }
+img, svg { max-width:100%; height:auto; display:block; }
+
 body{
   font-family:var(--font);
   background:
@@ -35,16 +39,12 @@ a{color:inherit;text-decoration:none}
   margin:0 auto;
 }
 
-/* Prevent horizontal scroll */
-html, body { width:100%; overflow-x:hidden; }
-img, svg { max-width:100%; height:auto; display:block; }
-
-/* ================= HEADER ================= */
+/* ================= HEADER (BIGGER BRAND, CLEAN, MOBILE SAFE) ================= */
 
 .site-header{
   position:sticky;
   top:0;
-  background:rgba(11,15,13,.84);
+  background:rgba(11,15,13,.90);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
   z-index:20;
@@ -54,31 +54,30 @@ img, svg { max-width:100%; height:auto; display:block; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:16px 0;           /* smaller, cleaner header */
-  gap:18px;
-  flex-wrap:wrap;
+  gap:24px;
+  padding:14px 0;
 }
 
 /* BRAND */
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
   min-width:0;
 }
 
-/* SHOW the icon (your sftlogo.png) */
-.brand-mark{display:none !important;} /* keep hidden if older markup exists */
+/* In case older markup exists, keep it hidden */
+.brand-mark{display:none !important;}
 
 .brand-icon{
-  height:34px;
+  height:52px;              /* bigger logo */
   width:auto;
   display:block;
 }
 
 .brand-name{
-  font-weight:850;
-  font-size:clamp(1.15rem, 1.6vw, 1.55rem);  /* balanced with hero */
+  font-weight:900;
+  font-size:clamp(1.35rem, 1.6vw, 1.85rem); /* bigger business name */
   letter-spacing:.2px;
   line-height:1.05;
   white-space:nowrap;
@@ -90,15 +89,15 @@ img, svg { max-width:100%; height:auto; display:block; }
 .nav{
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:20px;                 /* more breathing room */
   flex-wrap:wrap;
   justify-content:flex-end;
 }
 
 .nav a{
-  font-size:1.02rem;
-  font-weight:650;
-  opacity:.95;
+  font-size:1.05rem;        /* bigger menu */
+  font-weight:750;
+  opacity:.92;
 }
 
 .nav a:hover{opacity:1}
@@ -111,8 +110,8 @@ img, svg { max-width:100%; height:auto; display:block; }
   padding:12px 18px;
   border-radius:14px;
   background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  font-weight:800;
-  border:1px solid rgba(255,255,255,.08);
+  font-weight:850;
+  border:1px solid rgba(255,255,255,.10);
   box-shadow:0 14px 28px rgba(0,0,0,.30);
 }
 
@@ -125,8 +124,8 @@ img, svg { max-width:100%; height:auto; display:block; }
 }
 
 .btn-small{
-  padding:10px 16px;
-  font-size:1rem;
+  padding:11px 18px;
+  font-size:1.02rem;
   border-radius:14px;
 }
 
@@ -134,7 +133,7 @@ img, svg { max-width:100%; height:auto; display:block; }
 
 /* ================= HERO ================= */
 
-.hero{padding:56px 0 30px}
+.hero{padding:44px 0 26px}
 
 .hero-inner{
   display:grid;
@@ -142,11 +141,11 @@ img, svg { max-width:100%; height:auto; display:block; }
   gap:26px;
 }
 
-/* Make the hero H1 smaller so it doesn’t dwarf the header */
+/* Smaller hero headline so it doesn't dwarf header */
 h1{
-  font-size:clamp(1.85rem, 3.0vw, 2.55rem);  /* reduced */
+  font-size:clamp(1.65rem, 2.6vw, 2.25rem);
   margin:0 0 12px 0;
-  letter-spacing:-.4px;
+  letter-spacing:-.25px;
 }
 
 .lead{
@@ -302,53 +301,35 @@ h3{margin:0 0 10px}
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr}
   .grid-3,.grid-2,.gallery{grid-template-columns:1fr}
-  .nav{gap:12px}
+  .nav{gap:14px}
 }
 
-@media (max-width:600px){
+/* Mobile header behavior */
+@media (max-width:720px){
   .container{ width:min(var(--max), calc(100% - 28px)); }
 
   .header-inner{
-    padding:14px 0;
-    gap:12px;
+    padding:12px 0;
+    gap:14px;
+    flex-wrap:wrap;
   }
 
-  .brand-icon{ height:28px; }
+  .brand-icon{ height:42px; }
 
   .brand-name{
-    font-size:1.05rem;
+    font-size:1.18rem;
     white-space:normal;
   }
 
   .nav{
     width:100%;
     justify-content:flex-start;
-    gap:12px;
+    gap:14px;
   }
 
   .nav a{ font-size:1rem; }
 
   h1{
-    font-size:clamp(1.65rem, 7vw, 2.15rem); /* smaller on phones */
+    font-size:clamp(1.55rem, 6.8vw, 2.05rem);
   }
-}
-/* FINAL BALANCE: Make the hero headline match the header scale better */
-h1{
-  font-size: clamp(1.65rem, 2.6vw, 2.25rem) !important;
-  letter-spacing: -0.25px;
-}
-
-/* Tighten hero spacing so it feels less “billboard” */
-.hero{
-  padding: 44px 0 26px !important;
-}
-
-/* Optional: make the logo slightly more present in the header */
-.brand-icon{
-  height: 40px !important;
-}
-
-/* Optional: give the header a little more “authority” without getting tall */
-.header-inner{
-  padding: 14px 0 !important;
 }
