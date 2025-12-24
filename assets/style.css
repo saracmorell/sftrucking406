@@ -207,4 +207,21 @@ h3{margin:0 0 8px 0}
   .gallery{grid-template-columns:1fr}
   .nav{gap:12px}
 }
+.hero-inner {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
 
