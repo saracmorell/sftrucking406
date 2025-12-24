@@ -99,6 +99,30 @@ p{margin:0 0 12px 0}
   letter-spacing:.2px;
   line-height:1.15;
 }
+/* ===== Header wordmark upgrade ===== */
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  line-height: 1.1;
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.nav a {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.site-header .btn {
+  font-size: 0.9rem;
+}
 
 .brand-tag{
   font-size:.95rem;
