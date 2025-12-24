@@ -379,3 +379,74 @@ h3{
   .brand-tag{font-size:.92rem}
   .btn{padding:11px 14px}
 }
+/* =========================
+   HEADER POLISH (PASTE LAST)
+   ========================= */
+
+.site-header{
+  padding: 10px 0;
+}
+
+.header-inner{
+  padding: 16px 0;
+  gap: 22px;
+}
+
+.brand{
+  text-decoration: none;
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  min-width: 280px;
+}
+
+.brand-mark{
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  font-weight: 900;
+}
+
+.brand-name{
+  font-size: 1.25rem;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
+}
+
+.nav{
+  gap: 18px;
+}
+
+.nav a{
+  font-size: 1.02rem;
+  font-weight: 750;
+  opacity: 0.95;
+}
+
+.nav a:hover{
+  opacity: 1;
+}
+
+.btn.btn-small{
+  padding: 11px 16px;
+  border-radius: 14px;
+}
+
+/* Keep header readable on smaller screens */
+@media (max-width: 900px){
+  .header-inner{
+    padding: 14px 0;
+  }
+  .brand-mark{
+    width: 48px;
+    height: 48px;
+  }
+  .brand-name{
+    font-size: 1.08rem;
+  }
+  .nav a{
+    font-size: 0.98rem;
+  }
+}
