@@ -17,16 +17,23 @@
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
+
 body{
   font-family:var(--font);
-  background: radial-gradient(1200px 600px at 15% 10%, rgba(61,138,98,.25), transparent 60%),
-              radial-gradient(900px 500px at 90% 0%, rgba(47,111,78,.18), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(61,138,98,.25), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(47,111,78,.18), transparent 55%),
+    var(--bg);
   color:var(--text);
-  line-height:1.5;
+  line-height:1.55;
+  overflow-x:hidden;
 }
 
+img{max-width:100%; height:auto; display:block}
 a{color:inherit}
+p{margin:0 0 12px 0}
+
 .container{
   width: min(var(--max), calc(100% - 32px));
   margin:0 auto;
@@ -40,44 +47,55 @@ a{color:inherit}
   border-bottom:1px solid var(--line);
   z-index:10;
 }
+
 .header-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:16px 0;            /* a little taller */
+  padding:16px 0;
   gap:18px;
 }
 
-.brand{display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:12px; min-width:260px}
 .brand-mark{
-  width:52px;height:52px;    /* bigger badge */
-  border-radius:16px;
+  width:44px;height:44px;
+  border-radius:14px;
   display:grid;place-items:center;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   font-weight:900;
-  font-size:1.05rem;
   letter-spacing:.6px;
   box-shadow: var(--shadow);
-}
-.brand-name{
-  font-weight:900;
-  font-size:1.12rem;         /* bigger title */
-  line-height:1.1;
-}
-.brand-tag{
-  font-size:.98rem;          /* bigger subtitle */
-  color:var(--muted);
-  margin-top:2px;
+  flex:0 0 auto;
 }
 
-/* Nav */
-.nav{display:flex;align-items:center;gap:18px}
+.brand-text{display:flex; flex-direction:column; gap:2px}
+.brand-name{
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:.2px;
+  line-height:1.15;
+}
+
+.brand-tag{
+  font-size:.95rem;
+  color:var(--muted);
+  line-height:1.15;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex:0 0 auto;
+}
+
 .nav a{
-  opacity:.92;
+  opacity:.95;
   text-decoration:none;
   font-weight:700;
-  font-size:1.02rem;         /* bigger menu items */
+  font-size:1rem;
 }
+
 .nav a:hover{opacity:1}
 
 .btn{
@@ -91,35 +109,58 @@ a{color:inherit}
   font-weight:800;
   border:1px solid rgba(255,255,255,.08);
   box-shadow: 0 14px 28px rgba(0,0,0,.30);
+  white-space:nowrap;
 }
-.btn:hover{filter:brightness(1.05)}
+
+.btn:hover{filter:brightness(1.06)}
 .btn-outline{
   background: transparent;
-  border:1px solid rgba(255,255,255,.20);
+  border:1px solid rgba(255,255,255,.24);
   box-shadow:none;
 }
-.btn-small{padding:11px 16px;border-radius:13px}
+
+.btn-small{padding:10px 14px;border-radius:12px}
 .btn-block{width:100%}
 
 /* Hero */
-.hero{padding:64px 0 26px}
+.hero{
+  padding:64px 0 26px;
+}
+
 .hero-inner{
   display:grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap:22px;
-  align-items:stretch;
+  grid-template-columns: 1.15fr .85fr;
+  gap:26px;
+  align-items:start;
 }
+
 h1{
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2.2rem, 4.1vw, 3.35rem);
   margin:0 0 12px 0;
   letter-spacing:-.6px;
+  line-height:1.08;
 }
-.lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 10px}
+
+.lead{
+  font-size:1.08rem;
+  color:var(--muted);
+  max-width:58ch;
+}
+
+.cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:18px 0 10px
+}
 
 .hero-notes{
-  display:flex;flex-wrap:wrap;gap:10px;margin-top:14px
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px
 }
+
 .pill{
   padding:9px 12px;
   border-radius:999px;
@@ -129,19 +170,6 @@ h1{
   font-size:.92rem;
 }
 
-/* Mini pricing block */
-.hero-mini{
-  margin-top:18px;
-  background: rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.10);
-  border-radius: var(--radius);
-  padding:14px 16px;
-}
-.mini-title{font-weight:900;margin-bottom:8px}
-.mini-list{margin:0;padding-left:18px;color:var(--muted)}
-.mini-list li{margin:8px 0}
-.mini-disclaimer{margin-top:10px;color:var(--muted);font-size:.9rem;opacity:.9}
-
 .card{
   background: rgba(255,255,255,.06);
   border:1px solid rgba(255,255,255,.10);
@@ -149,21 +177,33 @@ h1{
   padding:18px;
   box-shadow: var(--shadow);
 }
-.card-title{font-weight:900;font-size:1.1rem;margin-bottom:6px}
+
+.card-title{font-weight:900;font-size:1.1rem;margin:0 0 6px 0}
 .card-text{color:var(--muted);margin:0 0 14px 0}
-.fineprint{margin-top:12px;color:var(--muted);font-size:.92rem}
-.contact-inline{margin-top:10px;display:grid;gap:6px}
-.contact-inline .label{opacity:.9}
+.fineprint{margin-top:12px;color:var(--muted);font-size:.92rem; line-height:1.45}
+
+.contact-inline{margin-top:10px; display:grid; gap:6px}
+.contact-inline a{ text-decoration: underline; text-underline-offset: 3px; }
 
 /* Sections */
-.section{padding:52px 0}
+.section{padding:56px 0}
 .section-alt{
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
-h2{margin:0 0 14px 0;font-size:1.7rem}
-h3{margin:0 0 8px 0}
+
+h2{
+  margin:0 0 14px 0;
+  font-size:1.75rem;
+  letter-spacing:-.2px;
+}
+
+h3{
+  margin:0 0 8px 0;
+  font-size:1.12rem;
+}
+
 .muted{color:var(--muted)}
 .small{font-size:.95rem}
 
@@ -172,19 +212,19 @@ h3{margin:0 0 8px 0}
   grid-template-columns: repeat(3, 1fr);
   gap:14px;
 }
+
 .grid-2{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   gap:14px;
 }
+
 .panel{
   background: rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.10);
   border-radius: var(--radius);
   padding:18px;
 }
-
-.features-row{margin-top:14px}
 
 .checklist{margin:0;padding-left:18px;color:var(--muted)}
 .checklist li{margin:10px 0}
@@ -195,30 +235,42 @@ h3{margin:0 0 8px 0}
   margin:14px 0;
 }
 
+.contact-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
 /* Gallery */
 .gallery{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:12px;
-  margin-top:16px;
+  gap:14px;
+  margin-top:18px;
 }
+
 .gallery-item{
   margin:0;
   border-radius: var(--radius);
   overflow:hidden;
   background: rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.10);
+  box-shadow: 0 12px 24px rgba(0,0,0,.22);
 }
+
 .gallery-item img{
-  display:block;
   width:100%;
-  height:210px;
+  aspect-ratio: 16 / 10;
   object-fit:cover;
+  background: rgba(255,255,255,.03);
 }
+
 .gallery-item figcaption{
   padding:10px 12px;
   color:var(--muted);
   font-size:.95rem;
+  border-top:1px solid rgba(255,255,255,.08);
 }
 
 /* Footer */
@@ -226,43 +278,56 @@ h3{margin:0 0 8px 0}
   padding:22px 0;
   border-top:1px solid var(--line);
 }
+
 .footer-inner{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:14px;
   flex-wrap:wrap;
   color:var(--muted);
 }
-.footer-left{display:grid;gap:6px}
-.footer-right{display:flex;align-items:center}
+
+.footer-left{display:flex; flex-direction:column; gap:6px}
 
 .footer-credit{
   display:inline-flex;
   align-items:center;
   gap:10px;
   text-decoration:none;
-  opacity:.92;
+  color:var(--muted);
+  font-weight:700;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
 }
-.footer-credit:hover{opacity:1}
 
-.tw-icon{
+.footer-credit:hover{filter:brightness(1.06)}
+
+.footer-icon{
   width:22px;
   height:22px;
-  border-radius:6px;
-  display:block;
-  box-shadow: 0 8px 18px rgba(0,0,0,.35);
-  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  object-fit:cover;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
 }
 
 /* Responsive */
 @media (max-width: 900px){
+  .header-inner{flex-wrap:wrap}
+  .brand{min-width:unset}
+  .nav{width:100%; justify-content:flex-end}
+
   .hero-inner{grid-template-columns:1fr}
   .grid-3{grid-template-columns:1fr}
   .grid-2{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
-  .nav{gap:12px}
-  .brand-mark{width:48px;height:48px}
-  .brand-name{font-size:1.06rem}
-  .brand-tag{font-size:.95rem}
+}
+
+@media (max-width: 520px){
+  .nav{justify-content:flex-start}
+  .brand-name{font-size:1rem}
+  .brand-tag{font-size:.92rem}
+  .btn{padding:11px 14px}
 }
