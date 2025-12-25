@@ -387,3 +387,11 @@ h3{margin:0 0 10px}
     margin-right: 8px;
   }
 }
+/* ================= MOBILE MENU SIZE FIX ================= */
+@media (max-width: 768px){
+  .nav a{
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .2px;
+  }
+}
