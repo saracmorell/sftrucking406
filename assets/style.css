@@ -355,3 +355,35 @@ h3{margin:0 0 10px}
     align-items: flex-start;
   }
 }
+/* ================= MOBILE BRAND NAME FIX ================= */
+@media (max-width: 768px) {
+
+  /* Give header breathing room */
+  .site-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Allow brand row to wrap instead of squeezing text */
+  .brand {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  /* Make the business name actually BIG on mobile */
+  .brand-name {
+    display: block;
+    font-size: 1.45rem !important;   /* ← THIS is the key */
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: normal;             /* allow wrap */
+    max-width: 100%;
+    margin-top: 2px;
+  }
+
+  /* Slightly reduce logo width so text can grow */
+  .brand-icon {
+    height: 42px;
+    margin-right: 8px;
+  }
+}
