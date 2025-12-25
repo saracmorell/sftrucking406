@@ -390,7 +390,7 @@ h3{margin:0 0 10px}
 /* ================= MOBILE MENU SIZE FIX ================= */
 @media (max-width: 768px){
   .nav a{
-    font-size: 1.15rem !important;
+    font-size: 1.25rem !important;
     font-weight: 800 !important;
     letter-spacing: .2px;
   }
