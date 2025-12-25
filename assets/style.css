@@ -333,3 +333,45 @@ h3{margin:0 0 10px}
     font-size:clamp(1.55rem, 6.8vw, 2.05rem);
   }
 }
+/* ================= BRAND LOGO FIX ================= */
+
+/* Make the logo actually look like a brand, not an icon */
+.brand-icon {
+  height: 56px !important;     /* THIS is the main fix */
+  width: auto;
+  display: block;
+}
+
+/* Balance the business name with the larger logo */
+.brand-name {
+  font-size: 1.35rem !important;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+/* Give the header slightly more presence */
+.header-inner {
+  padding: 18px 0 !important;
+}
+
+/* Desktop polish */
+@media (min-width: 900px) {
+  .brand-icon {
+    height: 64px !important;   /* CAT / John Deere scale */
+  }
+
+  .brand-name {
+    font-size: 1.45rem !important;
+  }
+}
+
+/* Mobile tuning so it doesn’t overpower */
+@media (max-width: 600px) {
+  .brand-icon {
+    height: 42px !important;
+  }
+
+  .brand-name {
+    font-size: 1.1rem !important;
+  }
+}
