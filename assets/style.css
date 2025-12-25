@@ -419,3 +419,48 @@ h3{margin:0 0 10px}
     margin-top: 8px !important;
   }
 }
+/* ================= MOBILE HEADER FIX (FINAL) ================= */
+@media (max-width: 720px){
+
+  /* Allow header to grow naturally */
+  .site-header{
+    height: auto !important;
+  }
+
+  .header-inner{
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 12px 0 !important;
+  }
+
+  /* Brand row stays horizontal */
+  .brand{
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Business name MUST wrap */
+  .brand-name{
+    white-space: normal !important;
+    overflow: visible !important;
+    max-width: 100% !important;
+    font-size: 1.05rem !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Logo stays strong but not greedy */
+  .brand img,
+  .brand-icon{
+    height: 46px !important;
+    width: auto !important;
+  }
+
+  /* Nav drops to its own line */
+  .nav{
+    width: 100% !important;
+    justify-content: flex-start !important;
+    margin-top: 4px !important;
+  }
+}
