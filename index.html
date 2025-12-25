@@ -200,6 +200,13 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  // Remove #top (or any hash) from the URL without reloading the page
+  if (window.location.hash) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  }
+</script>
+
 </body>
 </html>
 
