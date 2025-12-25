@@ -353,3 +353,61 @@ h3{margin:0 0 10px}
     font-size:clamp(1.55rem, 6.8vw, 2.05rem);
   }
 }
+/* ================= FINAL FIX: FORCE HEADER LOGO SIZE + STOP REFRESH JUMP ================= */
+
+/* 1) Stop the “refresh jump” caused by header height changing */
+.site-header{
+  height: 104px !important;            /* fixed height prevents layout shift */
+}
+.header-inner{
+  height: 104px !important;            /* match header height */
+  padding: 0 !important;
+  align-items: center !important;
+}
+
+/* 2) FORCE the logo bigger no matter what class name it has */
+.site-header .brand img,
+.site-header .brand svg,
+.site-header .brand picture img{
+  height: 72px !important;             /* BIG on desktop */
+  width: auto !important;
+  max-height: none !important;
+  max-width: none !important;
+  display: block !important;
+}
+
+/* 3) If your logo is not inside .brand for some reason, catch header images safely */
+.site-header img[alt*="SFT" i],
+.site-header img[src*="sft" i]{
+  height: 72px !important;
+  width: auto !important;
+  max-height: none !important;
+  max-width: none !important;
+}
+
+/* 4) Keep business name and menu balanced */
+.brand-name{
+  font-size: 1.55rem !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+}
+.nav a{
+  font-size: 1.08rem !important;
+  font-weight: 800 !important;
+}
+
+/* 5) Mobile tune so it still looks strong */
+@media (max-width: 720px){
+  .site-header{ height: 82px !important; }
+  .header-inner{ height: 82px !important; }
+
+  .site-header .brand img,
+  .site-header .brand svg,
+  .site-header .brand picture img,
+  .site-header img[alt*="SFT" i],
+  .site-header img[src*="sft" i]{
+    height: 46px !important;
+  }
+
+  .brand-name{ font-size: 1.18rem !important; }
+}
