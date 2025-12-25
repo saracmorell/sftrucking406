@@ -373,7 +373,7 @@ h3{margin:0 0 10px}
   /* Make the business name actually BIG on mobile */
   .brand-name {
     display: block;
-    font-size: 1.45rem !important;   /* ← THIS is the key */
+    font-size: 1.35rem !important;   /* ← THIS is the key */
     font-weight: 700;
     line-height: 1.2;
     white-space: normal;             /* allow wrap */
