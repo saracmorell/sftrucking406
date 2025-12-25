@@ -13,16 +13,23 @@
 
   --max:1240px;
   --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Header sizing controls */
+  --header-h: 104px;
+  --logo-h: 72px;
+
+  --header-h-m: 82px;
+  --logo-h-m: 46px;
 }
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 
-/* Prevent horizontal scroll + prevent refresh shift */
+/* Prevent horizontal scroll + reduce layout shift */
 html { scrollbar-gutter: stable; }
 html, body { width:100%; overflow-x:hidden; }
 
-/* NOTE: keep global images responsive, but logo will be explicitly sized below */
+/* Keep global images responsive */
 img, svg { max-width:100%; height:auto; display:block; }
 
 body{
@@ -42,7 +49,7 @@ a{color:inherit;text-decoration:none}
   margin:0 auto;
 }
 
-/* ================= HEADER (LOCKED HEIGHT, BIG LOGO, NO JUMP) ================= */
+/* ================= HEADER ================= */
 
 .site-header{
   position:sticky;
@@ -52,8 +59,8 @@ a{color:inherit;text-decoration:none}
   border-bottom:1px solid var(--line);
   z-index:20;
 
-  /* Lock the height so it cannot shift on refresh */
-  height: 96px;
+  /* Fixed height prevents refresh jump */
+  height: var(--header-h);
 }
 
 .header-inner{
@@ -62,11 +69,8 @@ a{color:inherit;text-decoration:none}
   justify-content:space-between;
   gap:24px;
 
-  /* Match the locked header height */
-  height: 96px;
-
-  /* Remove padding (padding causes reflow and "jump") */
-  padding: 0;
+  height: var(--header-h);
+  padding: 0; /* avoid reflow shifts */
 }
 
 /* BRAND */
@@ -77,29 +81,41 @@ a{color:inherit;text-decoration:none}
   min-width:0;
 }
 
-/* Hide old mark if it exists */
+/* Hide old mark/tag if they exist */
 .brand-mark{display:none !important;}
 .brand-tag{display:none !important;}
 
-/* FORCE the actual logo file to be large, every time */
-.brand img[src$="sftlogo.png"],
-.brand img[src*="sftlogo.png"]{
-  height: 64px !important;
+/*
+  LOGO SIZING (this ONLY works if the logo is actually an <img>/<svg> in the header)
+  These selectors are broad on purpose to catch whatever your template is using.
+*/
+.site-header .brand img,
+.site-header .brand svg,
+.site-header .brand picture img,
+.site-header img[src*="sft" i],
+.site-header img[alt*="sft" i],
+.site-header img[src*="logo" i],
+.site-header img[alt*="logo" i]{
+  height: var(--logo-h) !important;
   width: auto !important;
   max-width: none !important;
+  max-height: none !important;
+  display:block !important;
 }
 
-/* If you are using class="brand-icon" on the <img>, this also works */
+/* If you have class="brand-icon" on the img, great */
 .brand-icon{
-  height: 64px !important;
+  height: var(--logo-h) !important;
   width:auto !important;
   max-width:none !important;
+  max-height:none !important;
+  display:block !important;
 }
 
 /* Business name */
 .brand-name{
   font-weight:900;
-  font-size: 1.45rem;
+  font-size:1.55rem;
   letter-spacing:.2px;
   line-height:1.05;
   white-space:nowrap;
@@ -115,8 +131,8 @@ a{color:inherit;text-decoration:none}
 }
 
 .nav a{
-  font-size:1.05rem;
-  font-weight:750;
+  font-size:1.08rem;
+  font-weight:800;
   opacity:.92;
 }
 
@@ -323,17 +339,21 @@ h3{margin:0 0 10px}
   .nav{gap:14px}
 }
 
-/* Mobile header behavior */
 @media (max-width:720px){
   .container{ width:min(var(--max), calc(100% - 28px)); }
 
-  .site-header{ height: 78px; }
-  .header-inner{ height: 78px; gap:14px; }
+  .site-header{ height: var(--header-h-m); }
+  .header-inner{ height: var(--header-h-m); gap:14px; }
 
-  .brand img[src$="sftlogo.png"],
-  .brand img[src*="sftlogo.png"],
+  .site-header .brand img,
+  .site-header .brand svg,
+  .site-header .brand picture img,
+  .site-header img[src*="sft" i],
+  .site-header img[alt*="sft" i],
+  .site-header img[src*="logo" i],
+  .site-header img[alt*="logo" i],
   .brand-icon{
-    height: 44px !important;
+    height: var(--logo-h-m) !important;
   }
 
   .brand-name{
@@ -352,62 +372,4 @@ h3{margin:0 0 10px}
   h1{
     font-size:clamp(1.55rem, 6.8vw, 2.05rem);
   }
-}
-/* ================= FINAL FIX: FORCE HEADER LOGO SIZE + STOP REFRESH JUMP ================= */
-
-/* 1) Stop the “refresh jump” caused by header height changing */
-.site-header{
-  height: 104px !important;            /* fixed height prevents layout shift */
-}
-.header-inner{
-  height: 104px !important;            /* match header height */
-  padding: 0 !important;
-  align-items: center !important;
-}
-
-/* 2) FORCE the logo bigger no matter what class name it has */
-.site-header .brand img,
-.site-header .brand svg,
-.site-header .brand picture img{
-  height: 72px !important;             /* BIG on desktop */
-  width: auto !important;
-  max-height: none !important;
-  max-width: none !important;
-  display: block !important;
-}
-
-/* 3) If your logo is not inside .brand for some reason, catch header images safely */
-.site-header img[alt*="SFT" i],
-.site-header img[src*="sft" i]{
-  height: 72px !important;
-  width: auto !important;
-  max-height: none !important;
-  max-width: none !important;
-}
-
-/* 4) Keep business name and menu balanced */
-.brand-name{
-  font-size: 1.55rem !important;
-  font-weight: 900 !important;
-  line-height: 1.05 !important;
-}
-.nav a{
-  font-size: 1.08rem !important;
-  font-weight: 800 !important;
-}
-
-/* 5) Mobile tune so it still looks strong */
-@media (max-width: 720px){
-  .site-header{ height: 82px !important; }
-  .header-inner{ height: 82px !important; }
-
-  .site-header .brand img,
-  .site-header .brand svg,
-  .site-header .brand picture img,
-  .site-header img[alt*="SFT" i],
-  .site-header img[src*="sft" i]{
-    height: 46px !important;
-  }
-
-  .brand-name{ font-size: 1.18rem !important; }
 }
