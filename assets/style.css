@@ -447,3 +447,64 @@ h3{margin:0 0 10px}
     font-weight: 700;
   }
 }
+/* ===== MOBILE: MAKE BRAND NAME DOMINANT, MENU SECONDARY ===== */
+@media (max-width: 900px){
+
+  /* Header stacks cleanly */
+  .site-header{
+    height: auto !important;
+    padding: 16px 0 !important;
+  }
+
+  .header-inner{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    height: auto !important;
+    gap: 10px !important;
+  }
+
+  /* Brand block */
+  .brand{
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  /* Logo */
+  .brand-icon{
+    height: 54px !important;
+    width: auto !important;
+  }
+
+  /* BUSINESS NAME: make it look like a headline */
+  .brand-name{
+    font-family: 'Roboto Condensed', system-ui, sans-serif !important;
+    font-size: 1.85rem !important;   /* BIGGER */
+    font-weight: 800 !important;      /* HEAVIER */
+    letter-spacing: .3px !important;
+    line-height: 1.12 !important;
+    white-space: normal !important;
+    opacity: 1 !important;
+  }
+
+  /* NAV: make it look like navigation, not the brand */
+  .nav{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 22px !important;
+    padding-top: 2px !important;
+  }
+
+  .nav a{
+    font-size: 1.05rem !important;   /* SMALLER */
+    font-weight: 700 !important;
+    letter-spacing: .2px !important;
+    text-transform: uppercase !important; /* reads like menu */
+    opacity: .78 !important;          /* lighter than brand */
+  }
+
+  .nav a:hover{ opacity: 1 !important; }
+}
