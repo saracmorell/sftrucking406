@@ -508,3 +508,30 @@ h3{margin:0 0 10px}
 
   .nav a:hover{ opacity: 1 !important; }
 }
+/* ===== FORCE BRAND NAME FONT & HIERARCHY ===== */
+
+/* Brand business name */
+.brand-name{
+  font-family: 'Roboto Condensed', Arial, sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .4px !important;
+  line-height: 1.15 !important;
+}
+
+/* Mobile: make brand clearly NOT look like menu */
+@media (max-width: 900px){
+
+  .brand-name{
+    font-size: 2.05rem !important;   /* clearly bigger than menu */
+    font-weight: 700 !important;
+  }
+
+  .nav a{
+    font-family: system-ui, Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    opacity: .75 !important;
+  }
+}
