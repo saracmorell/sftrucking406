@@ -465,3 +465,52 @@ h3{margin:0 0 10px}
     margin-top: 4px !important;
   }
 }
+/* ================= FINAL HEADER LOCK (PUT AT VERY BOTTOM OF style.css) ================= */
+
+/* Stop refresh jump by locking header height */
+.site-header{
+  min-height: 104px !important;
+}
+.site-header .header-inner{
+  min-height: 104px !important;
+  padding: 0 0 !important;
+  align-items: center !important;
+}
+
+/* Force logo size no matter what loads after */
+.site-header .brand img,
+.site-header img[src*="sftlogo" i]{
+  height: 72px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Force business name size no matter what loads after */
+.site-header .brand-name{
+  font-size: 1.55rem !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+  white-space: nowrap !important;
+}
+
+/* Force menu size */
+.site-header .nav a{
+  font-size: 1.08rem !important;
+  font-weight: 800 !important;
+}
+
+/* Mobile: allow wrap so the name doesn't cut off */
+@media (max-width: 720px){
+  .site-header{ min-height: 88px !important; }
+  .site-header .header-inner{ min-height: 88px !important; }
+
+  .site-header .brand img,
+  .site-header img[src*="sftlogo" i]{
+    height: 54px !important;
+  }
+
+  .site-header .brand-name{
+    white-space: normal !important;
+    font-size: 1.15rem !important;
+  }
+}
