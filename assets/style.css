@@ -369,3 +369,53 @@ h3{margin:0 0 10px}
   }
 
 }
+/* ================= MOBILE: STOP BUSINESS NAME CUT-OFF ================= */
+@media (max-width: 720px){
+
+  /* Make header wrap instead of forcing one line */
+  .header-inner{
+    flex-wrap: wrap !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 12px 0 !important;
+  }
+
+  /* Give the brand row full width */
+  .brand{
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+
+  /* Force the business name to wrap and not get clipped */
+  .brand-name,
+  .site-header .brand-name,
+  .brand span,
+  .brand h1,
+  .brand h2{
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    max-width: calc(100% - 160px) !important; /* leaves room for the logo */
+    display: block !important;
+    line-height: 1.15 !important;
+    font-size: 1.05rem !important;
+  }
+
+  /* Keep logo strong but not so wide it steals all space */
+  .brand img,
+  .brand-icon{
+    height: 46px !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Put nav on its own line (prevents title getting chopped) */
+  .nav{
+    width: 100% !important;
+    justify-content: flex-start !important;
+    margin-top: 8px !important;
+  }
+}
