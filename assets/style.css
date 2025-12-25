@@ -375,3 +375,48 @@ h3{margin:0 0 10px}
     font-size: 1.1rem !important;
   }
 }
+/* ================= HARD OVERRIDES: LOGO + NO PAGE JUMP ================= */
+
+/* Prevent refresh "jump" (layout shift) */
+html { scrollbar-gutter: stable; } /* keeps layout from shifting when scrollbar appears */
+
+/* Lock header height so it can't resize after logo/font loads */
+.site-header { 
+  min-height: 96px !important; 
+}
+.header-inner { 
+  min-height: 96px !important;
+  padding: 18px 0 !important;
+  align-items: center !important;
+}
+
+/* FORCE the logo to be bigger (covers multiple possible markup patterns) */
+.brand img,
+.brand-icon,
+.site-header img {
+  height: 64px !important;     /* make it obviously bigger */
+  width: auto !important;
+  max-height: none !important;
+  display: block !important;
+}
+
+/* Keep the name balanced with bigger logo */
+.brand-name {
+  font-size: 1.45rem !important;
+  font-weight: 850 !important;
+  line-height: 1.05 !important;
+}
+
+/* Mobile: still strong, not huge */
+@media (max-width: 600px) {
+  .site-header { min-height: 78px !important; }
+  .header-inner { min-height: 78px !important; padding: 14px 0 !important; }
+
+  .brand img,
+  .brand-icon,
+  .site-header img {
+    height: 44px !important;
+  }
+
+  .brand-name { font-size: 1.1rem !important; }
+}
