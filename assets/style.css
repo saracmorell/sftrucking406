@@ -348,3 +348,24 @@ h3{margin:0 0 10px}
     font-size:clamp(1.55rem, 6.8vw, 2.05rem);
   }
 }
+/* ================= MOBILE BRAND NAME FIX ================= */
+@media (max-width: 720px) {
+
+  /* Allow the business name to wrap instead of being cut off */
+  .brand-name {
+    white-space: normal !important;
+    line-height: 1.15;
+  }
+
+  /* Let brand take full width so text has room */
+  .brand {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  /* Slightly reduce font size just for mobile balance */
+  .brand-name {
+    font-size: 1.05rem !important;
+  }
+
+}
