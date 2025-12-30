@@ -175,6 +175,22 @@ h1{
   color:var(--muted);
 }
 
+/* BADGE (keep OUT of media queries so it behaves everywhere) */
+.hero-badge{
+  max-width:260px;
+  width:100%;
+  height:auto;
+  display:block;
+  margin:20px auto;
+}
+
+/* Optional small line if you’re using it */
+.montana-line{
+  font-size:0.95rem;
+  color:#b9d6c2;
+  margin:6px 0 12px;
+}
+
 /* ================= SECTIONS ================= */
 
 .section{padding:56px 0}
@@ -314,17 +330,6 @@ h3{margin:0 0 10px}
     padding-top:max(10px, env(safe-area-inset-top));
     padding-bottom:8px;
   }
-  .hero-badge {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
-  .montana-line {
-  font-size: 0.95rem;
-  color: #b9d6c2;
-  margin: 6px 0 12px;
 }
 
 
