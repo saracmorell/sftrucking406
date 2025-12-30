@@ -315,19 +315,28 @@ h3{margin:0 0 10px}
     padding-bottom:8px;
   }
 }
-/* ================= BADGE SEAL ================= */
+/* ================= BADGE SEAL (BOTTOM CENTER) ================= */
 
 .badge-seal {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 40px 0 20px;
+  padding: 18px 0 6px; /* tight spacing */
+  margin: 0;
 }
 
 .badge-seal img {
-  width: 140px;
-  max-width: 60vw;
+  width: 110px;       /* controlled, not huge */
+  max-width: 110px;
   height: auto;
-  opacity: 0.95;
+  display: block;
 }
 
+.badge-text {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-align: center;
+}
 
