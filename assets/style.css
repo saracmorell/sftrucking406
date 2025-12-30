@@ -314,22 +314,17 @@ h3{margin:0 0 10px}
     padding-top:max(10px, env(safe-area-inset-top));
     padding-bottom:8px;
   }
-  .montana-line {
-  font-size: 0.95rem;
-  color: #b9d6c2;
-  margin: 6px 0 12px;
-}
-}
-.sft-badge {
-  width: 155px;
-  margin: 14px 0 12px;
-  display: block;
-}
-
-.hero-badge {
+  .hero-badge {
   max-width: 260px;
   width: 100%;
   height: auto;
   display: block;
   margin: 20px auto;
 }
+  .montana-line {
+  font-size: 0.95rem;
+  color: #b9d6c2;
+  margin: 6px 0 12px;
+}
+
+
