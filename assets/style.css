@@ -327,12 +327,18 @@ h3{margin:0 0 10px}
 }
 
 .badge-seal img {
-  width: 110px;       /* controlled, not huge */
+  width: 110px;        /* mobile default */
   max-width: 110px;
   height: auto;
   display: block;
 }
-
+/* Desktop bump for badge */
+@media (min-width: 900px) {
+  .badge-seal img {
+    width: 140px;      /* ~25% bigger on desktop */
+    max-width: 140px;
+  }
+}
 .badge-text {
   margin-top: 6px;
   font-size: 0.95rem;
