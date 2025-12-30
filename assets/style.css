@@ -175,22 +175,6 @@ h1{
   color:var(--muted);
 }
 
-/* BADGE (keep OUT of media queries so it behaves everywhere) */
-.hero-badge{
-  max-width:260px;
-  width:100%;
-  height:auto;
-  display:block;
-  margin:20px auto;
-}
-
-/* Optional small line if you’re using it */
-.montana-line{
-  font-size:0.95rem;
-  color:#b9d6c2;
-  margin:6px 0 12px;
-}
-
 /* ================= SECTIONS ================= */
 
 .section{padding:56px 0}
