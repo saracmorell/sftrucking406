@@ -315,5 +315,19 @@ h3{margin:0 0 10px}
     padding-bottom:8px;
   }
 }
+/* ================= BADGE SEAL ================= */
+
+.badge-seal {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 20px;
+}
+
+.badge-seal img {
+  width: 140px;
+  max-width: 60vw;
+  height: auto;
+  opacity: 0.95;
+}
 
 
