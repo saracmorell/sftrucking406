@@ -72,7 +72,7 @@ a{color:inherit;text-decoration:none}
 .brand-name{
   font-family:var(--brand-font);
   font-weight:700;
-  font-size:1.85rem;      /* brand level */
+  font-size:2.4rem;      /* brand level */
   letter-spacing:.3px;
   line-height:1.05;
   white-space:nowrap;     /* desktop stays single line */
