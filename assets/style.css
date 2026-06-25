@@ -126,7 +126,7 @@ a{color:inherit;text-decoration:none}
 .btn-block{width:100%}
 
 /* ================= HERO ================= */
-.hero{padding:60px 0 40px}
+.hero{padding:44px 0 10px}
 
 .hero-inner{
   display:flex;
