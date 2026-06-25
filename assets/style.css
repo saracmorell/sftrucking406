@@ -126,7 +126,7 @@ a{color:inherit;text-decoration:none}
 .btn-block{width:100%}
 
 /* ================= HERO ================= */
-.hero{padding:44px 0 10px}
+.hero{padding:32px 0 16px}
 
 .hero-inner{
   display:flex;
@@ -135,7 +135,7 @@ a{color:inherit;text-decoration:none}
 }
 
 .hero-copy{
-  max-width:680px;
+  max-width:880px;
   width:100%;
   text-align:center;
 }
