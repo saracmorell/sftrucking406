@@ -154,18 +154,24 @@ h1{
 
 .hero-notes{
   display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+  flex-direction:column;
+  gap:6px;
   margin-top:12px;
 }
 
 .pill{
-  padding:9px 14px;
-  border-radius:999px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
+  padding:4px 0;
   font-size:.92rem;
   color:var(--muted);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.pill::before{
+  content:"✓";
+  color:var(--accent-2);
+  font-weight:700;
 }
 
 /* ================= SECTIONS ================= */
