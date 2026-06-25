@@ -153,6 +153,7 @@ h1{
 }
 
 .hero-notes{
+   align-items:center;
   display:flex;
   flex-direction:column;
   gap:6px;
@@ -286,6 +287,9 @@ h3{margin:0 0 10px}
 @media (max-width: 900px){
   .hero-inner{grid-template-columns:1fr}
   .grid-2{grid-template-columns:1fr}
+  .hero-notes{
+    align-items:center;
+  }
 
   /* MOBILE HEADER: STACK IT, MAKE BRAND DOMINANT */
   .header-inner{
