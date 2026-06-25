@@ -318,33 +318,40 @@ h3{margin:0 0 10px}
 }
 
 /* ================= BADGE SEAL (BOTTOM CENTER) ================= */
+/* ================= BADGE SEAL (BOTTOM CENTER) ================= */
 .badge-seal {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 18px 0 6px; /* tight spacing */
+  padding: 28px 0 26px;
   margin: 0;
 }
 
 .badge-seal img {
-  width: 110px;        /* mobile default */
-  max-width: 110px;
+  width: 200px;
+  max-width: 200px;
   height: auto;
   display: block;
 }
 
-/* Desktop bump for badge */
 @media (min-width: 900px) {
   .badge-seal img {
-    width: 140px;      /* ~25% bigger on desktop */
-    max-width: 140px;
+    width: 240px;
+    max-width: 240px;
   }
 }
 
 .badge-text {
-  margin-top: 6px;
+  margin-top: 10px;
   font-size: 0.95rem;
   color: var(--muted);
   text-align: center;
+}
+
+.badge-footer {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
