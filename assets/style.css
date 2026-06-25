@@ -254,15 +254,28 @@ h3{margin:0 0 10px}
 }
 
 /* ================= FOOTER ================= */
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>© 2022 Salomon Farms &amp; Trucking</div>
-    <div class="muted" style="display:flex; align-items:center; gap:10px;">
-      <img src="assets/img/twglobe.png" alt="Tavas World" style="width:22px;height:22px;border-radius:50%;opacity:.9;">
-      <a class="muted" href="https://tavasworld.com" target="_blank" rel="noopener">Site by TavasWorld.com</a>
-    </div>
-  </div>
-</footer>
+/* ================= FOOTER ================= */
+.site-footer{
+  padding:26px 0;
+  border-top:1px solid var(--line);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px;
+  color:var(--muted);
+}
+
+@media (max-width: 720px){
+  .footer-inner{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:10px;
+  }
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px){
