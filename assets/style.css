@@ -329,16 +329,16 @@ h3{margin:0 0 10px}
 }
 
 .badge-seal img {
-  width: 200px;
-  max-width: 200px;
+  width: 280px;
+  max-width: 280px;
   height: auto;
   display: block;
 }
 
 @media (min-width: 900px) {
   .badge-seal img {
-    width: 240px;
-    max-width: 240px;
+    width: 340px;
+    max-width: 340px;
   }
 }
 
