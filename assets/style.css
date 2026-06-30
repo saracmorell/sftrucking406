@@ -297,19 +297,16 @@ h3{margin:0 0 10px}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px){
-  .hero-inner{grid-template-columns:1fr}
-  .grid-2{grid-template-columns:1fr}
-  .hero-notes{
-    align-items:center;
-  }
+.hero-inner{grid-template-columns:1fr}
+.hero-copy{text-align:center;align-items:center;margin:0 auto;}
 
   /* MOBILE HEADER: STACK IT, MAKE BRAND DOMINANT */
-  .header-inner{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
-    padding:16px 0;
-  }
+.header-inner{
+flex-direction:column;
+align-items:center;
+gap:10px;
+padding:16px 0;
+}
   .brand-name{
     font-size:2.05rem;      /* BIGGER than menu */
     white-space:normal;     /* allow wrap instead of cutoff */
@@ -317,12 +314,12 @@ h3{margin:0 0 10px}
   .brand-icon{
     height:54px;
   }
-  .nav{
-    width:100%;
-    justify-content:flex-start;
-    gap:18px;
-    padding-top:2px;
-  }
+ .nav{
+width:100%;
+justify-content:center;
+gap:18px;
+padding-top:2px;
+}
   .nav a{
     font-size:1.02rem;      /* smaller than brand */
     opacity:.72;
