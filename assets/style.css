@@ -298,8 +298,8 @@ h3{margin:0 0 10px}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px){
 .hero-inner{grid-template-columns:1fr}
+.grid-2{grid-template-columns:1fr}
 .hero-copy{text-align:center;align-items:center;margin:0 auto;}
-
   /* MOBILE HEADER: STACK IT, MAKE BRAND DOMINANT */
 .header-inner{
 flex-direction:column;
