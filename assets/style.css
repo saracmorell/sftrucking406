@@ -217,6 +217,13 @@ h3{margin:0 0 10px}
   grid-template-columns:repeat(2,1fr);
   gap:16px;
 }
+.section:not(.section-alt) .grid-2{
+  display:block;
+}
+.section:not(.section-alt) .grid-2 .panel{
+  max-width:680px;
+  margin:0 auto;
+}
 
 .panel{
   background:rgba(255,255,255,.05);
