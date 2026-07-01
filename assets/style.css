@@ -238,6 +238,7 @@ padding-left:18px;
 color:var(--text);
 }
 .checklist li{margin:10px 0}
+.muted.small{text-align:center;}
 /* WHY GRID */
 .why-grid{
 display:grid;
