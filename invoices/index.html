@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SFT Invoices</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b0f0d">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/sft-icon-192.png">
+<link rel="apple-touch-icon" href="/assets/img/sft-icon-512.png">
+<link rel="manifest" href="/invoices/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SFT Invoices">
+<style>
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#0b0f0d;color:#e9efe9;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;text-align:center;padding:24px;box-sizing:border-box}
+img{width:120px;height:120px;border-radius:26px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+h1{margin:0;font-size:1.6rem}
+.btn{display:block;width:100%;max-width:340px;padding:18px;border-radius:14px;background:linear-gradient(135deg,#2f6f4e,#3d8a62);color:#fff;font-size:1.25rem;font-weight:800;text-decoration:none}
+.tip{max-width:340px;color:#b6c3b9;font-size:.95rem;line-height:1.5}
+</style>
+</head>
+<body>
+<img src="/assets/img/sft-icon-512.png" alt="SFT">
+<h1>SFT Invoices</h1>
+<a class="btn" id="go" href="https://script.google.com/macros/s/AKfycbxagqauhkTwU99a5D_cVSSlusaLRvxXVnjreZ5R6CMTX0pNcVDGtnz2c0CPHxOJHtUV/exec">Open Invoices</a>
+<p class="tip">Save this page to your home screen to get the SFT icon.<br>Chrome: tap the 3 dots, then Add to Home screen (or Install app).<br>iPhone: tap Share, then Add to Home Screen.</p>
+<script>
+var APP = "https://script.google.com/macros/s/AKfycbxagqauhkTwU99a5D_cVSSlusaLRvxXVnjreZ5R6CMTX0pNcVDGtnz2c0CPHxOJHtUV/exec";
+var fromHome = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone || /[?&]go=1/.test(location.search);
+if (fromHome) location.replace(APP);
+</script>
+</body>
+</html>
