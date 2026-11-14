@@ -471,3 +471,89 @@ padding-top:2px;
   .hero-badge{animation:none}
   .reveal{opacity:1;transform:none;transition:none}
 }
+
+/* ===== 2026 REFRESH 2: bigger badge, 3D buttons, card hovers, title accents, phone call bar ===== */
+.hero-badge{width:260px;height:260px;margin-bottom:22px;box-shadow:0 0 0 4px rgba(61,138,98,.35),0 22px 50px rgba(0,0,0,.55)}
+
+/* 3D buttons */
+.btn{
+  position:relative;
+  padding:14px 26px;
+  border-radius:14px;
+  font-weight:800;
+  letter-spacing:.3px;
+  background:linear-gradient(180deg,#4fa576 0%,#2f6f4e 55%,#245a3f 100%);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -3px 0 rgba(0,0,0,.25),0 10px 22px rgba(0,0,0,.45),0 2px 0 #1b4430;
+  text-shadow:0 1px 1px rgba(0,0,0,.35);
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease,border-color .18s ease;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  filter:brightness(1.08);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.25),0 16px 30px rgba(0,0,0,.5),0 0 22px rgba(79,165,118,.45),0 2px 0 #1b4430;
+}
+.btn:active{transform:translateY(1px);box-shadow:inset 0 2px 6px rgba(0,0,0,.35),0 4px 10px rgba(0,0,0,.4)}
+.btn-outline{
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.02));
+  border:1px solid rgba(200,230,210,.35);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 22px rgba(0,0,0,.40);
+}
+.btn-outline:hover{
+  border-color:rgba(111,191,74,.8);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 16px 30px rgba(0,0,0,.5),0 0 20px rgba(111,191,74,.35);
+}
+
+/* service cards: lift + green edge */
+.panel,.why-item{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.grid-3 > .panel:hover,.why-item:hover{
+  transform:translateY(-4px);
+  border-color:rgba(111,191,74,.6);
+  box-shadow:0 16px 34px rgba(0,0,0,.45),0 0 18px rgba(79,165,118,.22);
+}
+
+/* photo cards: fill the frame, gentle zoom */
+.gallery-item{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.gallery-item img{height:240px;object-fit:cover;transition:transform .5s ease}
+.gallery-item:hover{transform:translateY(-4px);border-color:rgba(111,191,74,.6);box-shadow:0 16px 34px rgba(0,0,0,.45)}
+.gallery-item:hover img{transform:scale(1.05)}
+
+/* section titles: short green line */
+h2::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:3px;
+  margin:10px auto 0;
+  border-radius:3px;
+  background:linear-gradient(90deg,#3d8a62,#6fbf4a);
+}
+
+/* contact links look tappable */
+.panel a:not(.btn){color:#8fd49c;border-bottom:1px solid rgba(143,212,156,.35)}
+.panel a:not(.btn):hover{color:#b6ecc0;border-bottom-color:#b6ecc0}
+
+/* phone-only Call / Text bar */
+.mobile-cta{display:none}
+@media (max-width:720px){
+  .hero-badge{width:200px;height:200px}
+  .mobile-cta{
+    display:flex;
+    gap:10px;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:50;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(11,15,13,.94);
+    backdrop-filter:blur(10px);
+    border-top:1px solid rgba(111,191,74,.35);
+  }
+  .mobile-cta a{flex:1;text-align:center;padding:13px 0;font-size:1.05rem}
+  body{padding-bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){
+  .btn,.panel,.why-item,.gallery-item,.gallery-item img{transition:none}
+  .btn:hover,.grid-3 > .panel:hover,.why-item:hover,.gallery-item:hover,.gallery-item:hover img{transform:none}
+}
