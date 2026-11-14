@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Salomon Farms & Trucking, shipping container sales and delivery, container transport, and Montana-grown hay. Serving Montana." />
   <title>Salomon Farms & Trucking | Agriculture & Transport You Can Count On.</title>
-  <link rel="stylesheet" href="assets/style.css?v=11" />
+  <link rel="stylesheet" href="assets/style.css?v=12" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/sft-icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/img/sft-icon-512.png" />
 </head>
 <body>
 <header class="site-header">
@@ -205,6 +207,17 @@
 if (window.location.hash) {
   history.replaceState(null, "", window.location.pathname + window.location.search);
 }
+</script>
+<script>
+  /* gentle fade-up as sections scroll into view */
+  (function () {
+    var els = document.querySelectorAll(".section h2, .panel, .gallery-item, .why-item");
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { el.classList.add("reveal"); io.observe(el); });
+  })();
 </script>
 </body>
 </html>
