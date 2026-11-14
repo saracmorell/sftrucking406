@@ -420,3 +420,54 @@ padding-top:2px;
     padding: 24px 20px;
   }
 }
+
+/* ===== 2026 REFRESH: badge, tags, tighter spacing, gentle motion ===== */
+.hero{padding:28px 0 8px}
+.hero-badge{
+  width:150px;
+  height:150px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  box-shadow:0 18px 40px rgba(0,0,0,.45);
+  animation:badgeIn .9s cubic-bezier(.2,.8,.2,1) both;
+}
+@keyframes badgeIn{
+  from{opacity:0;transform:scale(.85) translateY(10px)}
+  to{opacity:1;transform:none}
+}
+.hero-notes{
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:22px auto 0;
+}
+.pill{
+  padding:8px 16px;
+  border:1px solid rgba(110,180,90,.45);
+  border-radius:999px;
+  background:rgba(78,122,46,.14);
+  color:var(--text);
+  font-size:.9rem;
+  letter-spacing:.2px;
+}
+.pill::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#6fbf4a;
+  display:inline-block;
+}
+.section{padding:36px 0}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:720px){
+  .hero-badge{width:120px;height:120px}
+  .section{padding:28px 0}
+  .pill{padding:7px 12px;font-size:.82rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-badge{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
